@@ -1,0 +1,11 @@
+{
+    "$schema": "./schema.json",
+    "name": {
+        "zh": "暨南大学",
+        "en": "Jinan University"
+    },
+    "since": "1906-11-16",
+    "colleges": [
+        
+    ]
+}

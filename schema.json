@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "School schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "School name",
+            "$ref": "#/definitions/translatable"
+        },
+        "since": {
+            "description": "Since",
+            "type": "string",
+            "format": "date"
+        },
+        "colleges": {
+            "description": "List of colleges",
+            "type": "array"
+
+        }
+    },
+    "definitions": {
+        "translatable": {
+            "type": "object",
+            "properties": {
+                "zh": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
