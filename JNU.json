@@ -4,8 +4,59 @@
         "zh": "暨南大学",
         "en": "Jinan University"
     },
+    "site": "ht",
     "since": "1906-11-16",
+    "campuses": [
+        {
+            "name": {
+                "zh": "石牌校区",
+                "en": "Main Campus"
+            },
+            "alternative_name": {
+                "zh": [
+                    "本部",
+                    "校本部"
+                ],
+                "en": [
+                    "Shipai Campus"
+                ]
+            },
+            "address": {
+                "zh": "广东省广州市黄埔大道西 601 号",
+                "en": ""
+            }
+        },
+        {
+            "name": {
+                "zh": "番禺校区",
+                "en": "Panyu Campus"
+            },
+            "alternative_name": {
+                "zh": [
+                    "南校区"
+                ],
+                "en": [
+                    "South Campus"
+                ]
+            },
+            "address": {
+                "zh": "广东省广州市番禺区兴业大道东 855 号",
+                "en": ""
+            }
+        },
+        {
+            "name": {
+                "zh": "广园东校区",
+                "en": ""
+            }
+        }
+    ],
     "colleges": [
-        
+        {
+            "name": {
+                "zh": "文学院",
+                "en": "College of Liberal Arts"
+            }
+        }
     ]
 }

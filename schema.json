@@ -7,18 +7,90 @@
             "description": "School name",
             "$ref": "#/definitions/translatable"
         },
+        "site": {
+            "description": "Site of school",
+            "$ref": "#/definitions/uri"
+        },
         "since": {
             "description": "Since",
             "type": "string",
             "format": "date"
         },
+        "campuses": {
+            "description": "List of campuses",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/campus"
+            }
+        },
         "colleges": {
             "description": "List of colleges",
-            "type": "array"
-
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/college"
+            }
         }
     },
     "definitions": {
+        "campus": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of campus",
+                    "$ref": "#/definitions/translatable"
+                },
+                "alternative_name": {
+                    "description": "Alternative name of campus",
+                    "type": "object",
+                    "properties": {
+                        "zh": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "en": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "address": {
+                    "description": "Address of campus",
+                    "$ref": "#/definitions/translatable"
+                }
+            }
+        },
+        "college": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of college",
+                    "$ref": "#/definitions/translatable"
+                },
+                "majors": {
+                    "description": "List of major in this college"
+                }
+            }
+        },
+        "major": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of major",
+                    "$ref": "#/definitions/translatable"
+                },
+                "fee": {
+                    "description": "Cost of this major, per year",
+                    "type": "integer"
+                },
+                "length": {
+                    "description": ""
+                }
+            }
+        },
         "translatable": {
             "type": "object",
             "properties": {
@@ -29,6 +101,11 @@
                     "type": "string"
                 }
             }
+        },
+        "uri": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
         }
     }
 }
